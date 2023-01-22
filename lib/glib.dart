@@ -2,6 +2,7 @@ library glib;
 
 export 'src/gmacros.dart';
 export 'src/gtimezone.dart' hide GTimeZoneMixin;
+export 'src/gtype.dart' hide GTypeMixin;
 export 'src/gtypes.dart';
 export 'src/gutils.dart' hide GUtilsMixin;
 export 'src/guuid.dart' hide GUuidMixin;
