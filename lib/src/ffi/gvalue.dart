@@ -3,6 +3,7 @@ import 'dart:ffi' as ffi;
 import 'package:ffi/ffi.dart' as ffi;
 
 import '../gtype.dart';
+import '../gtypes.dart';
 import '../gvalue.dart';
 import 'ffi_x.dart';
 import 'finalizer.dart';
@@ -31,6 +32,9 @@ class GValueFfi implements GValue, ffi.Finalizable {
 
   @override
   GType get type => GType(_ptr.ref.g_type);
+
+  @override
+  gpointer get address => _ptr.address;
 
   @override
   GValue copy() {

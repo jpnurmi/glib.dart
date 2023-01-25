@@ -23,6 +23,7 @@ typedef gsize = int;
 typedef goffset = int;
 typedef gintptr = int;
 typedef guintptr = int;
+typedef gpointer = int;
 
 typedef gfloat = double;
 typedef gdouble = double;

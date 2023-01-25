@@ -1,5 +1,6 @@
 import 'glib.dart';
 import 'gtype.dart';
+import 'gtypes.dart';
 
 abstract class GValue {
   factory GValue() => GValue.type(GType.invalid);
@@ -23,6 +24,7 @@ abstract class GValue {
       GValue.type(GType.string)..setString(value);
 
   GType get type;
+  gpointer get address;
 
   GValue copy();
   void reset();
