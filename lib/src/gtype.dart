@@ -41,14 +41,5 @@ class GType {
   ];
 
   @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-    return other is GType && other.value == value;
-  }
-
-  @override
-  int get hashCode => value.hashCode;
-
-  @override
   String toString() => 'GType(value: $value)';
 }
