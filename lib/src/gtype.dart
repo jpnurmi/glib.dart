@@ -10,6 +10,7 @@ class GType {
 
   final int value;
 
+  static const invalid = GType(G_TYPE_INVALID);
   static const boolean = GType(G_TYPE_BOOLEAN);
   static const schar = GType(G_TYPE_CHAR);
   static const uchar = GType(G_TYPE_UCHAR);
@@ -24,6 +25,7 @@ class GType {
   static const string = GType(G_TYPE_STRING);
 
   static const values = [
+    invalid,
     boolean,
     schar,
     uchar,
