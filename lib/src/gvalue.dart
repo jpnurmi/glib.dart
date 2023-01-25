@@ -2,6 +2,7 @@ import 'glib.dart';
 import 'gtype.dart';
 
 abstract class GValue {
+  factory GValue() => GValue.type(GType.invalid);
   factory GValue.type(GType type) => glib.createValue(type);
   factory GValue.boolean(bool value) =>
       GValue.type(GType.boolean)..setBoolean(value);

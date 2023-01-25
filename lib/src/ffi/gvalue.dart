@@ -14,7 +14,9 @@ mixin GValueFfiMixin on GValueMixin {
   @override
   GValue createValue(GType type) {
     final value = ffi.calloc<g.GValue>();
-    libgobject.g_value_init(value, type.value);
+    if (type != GType.invalid) {
+      libgobject.g_value_init(value, type.value);
+    }
     return GValueFfi(value);
   }
 }

@@ -16,6 +16,11 @@ void main() {
     expect(value.getString(), isEmpty);
   });
 
+  test('invalid', () {
+    final value = GValue();
+    expect(value.type, GType.invalid);
+  });
+
   test('boolean', () {
     final value = GValue.boolean(true);
     expect(value.type, GType.boolean);
